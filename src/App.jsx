@@ -116,7 +116,7 @@ const HomePage = ({ theme, photoList }) => {
     const randomIndex = Math.floor(Math.random() * photoList.length);
     setCurrentPhoto(photoList[randomIndex]);
     
-    // UPDATED CAPTIONS LIST (Indian Slang + Urdu + Funny)
+    // UPDATED CAPTIONS LIST
     const captions = [
       "Mashallah, kya nurani chehra hai ✨",
       "Astaghfirullah, tauba tauba ye kya dekh liya 🤲",
@@ -207,7 +207,6 @@ const HomePage = ({ theme, photoList }) => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
           
           <div className={`${theme.cardBg} p-4 border-8 ${theme.border} ${theme.shadow} rotate-[-3deg] max-w-md w-full relative z-10`}>
-            {/* UPDATED IMAGE STYLING: Added 'bg-black' and 'object-contain' to fit any shape */}
             <div className={`h-80 md:h-[500px] bg-black overflow-hidden border-4 ${theme.border} flex items-center justify-center`}>
               <img src={currentPhoto} className="w-full h-full object-contain" />
             </div>
@@ -216,11 +215,20 @@ const HomePage = ({ theme, photoList }) => {
             </h2>
           </div>
 
+          {/* RIGHT SIDE BOX (UPDATED WITH LYRICS) */}
           <div className={`${theme.cardBg} border-4 ${theme.border} p-6 ${theme.shadow} max-w-xs w-full`}>
-            <p className="font-mono font-bold mb-4">
-              > TARGET: ABHINAV<br/>
-              > PHOTOS: {photoList.length} FOUND
-            </p>
+            <div className="font-mono font-bold mb-6 space-y-2">
+              <p className="border-b-2 border-black/20 pb-2">
+                > NOW PLAYING: 
+              </p>
+              <p className="text-lg leading-relaxed italic opacity-80">
+                "Ek din mar jayega kutte ki maut,<br/>
+                jag me sab kahenge marr gya madarchod..."
+              </p>
+              <p className="text-xs opacity-50 pt-2">
+                (La la la la la...) 🎶
+              </p>
+            </div>
             <button onClick={generateMemory} className={`w-full ${theme.accent} border-4 ${theme.border} py-3 font-black text-xl hover:translate-x-1 hover:translate-y-1 transition-all`}>
               🔄 SHUFFLE
             </button>
@@ -228,7 +236,7 @@ const HomePage = ({ theme, photoList }) => {
         </div>
       </section>
 
-      {/* 3. OPEN LETTER (HINGLISH) */}
+      {/* 3. OPEN LETTER (ENGLISH VERSION REVERTED) */}
       <section className={`py-24 ${theme.noteSection} flex justify-center px-4 transition-colors duration-500`}>
         <div className={`${theme.cardBg} border-8 ${theme.border} p-8 md:p-16 max-w-3xl relative ${theme.shadow} rotate-1`}>
           
@@ -244,17 +252,15 @@ const HomePage = ({ theme, photoList }) => {
             <p className="opacity-90">
               Happy Birthday, Homie! 
               <br/><br/>
-              Honestly, ye photos dekh ke aur ye code likhte time realize hua ki 1st year se ab tak kitni crazy memories stack ho gayi hain.
+              Honestly, looking back at these photos and writing this code, I realized how many crazy memories we’ve made since 1st year.
               <br/><br/>
-              Pata h aajkal vibe thodi off h. Me bahut overthink kr rha hu aur vo purane din miss krta hu jab kuch bhi bol deta tha bina soche.
+              I know things have been a bit off-beat from summer breaks . I’ve been overthinking a lot, and I miss the days when I could just say whatever came to my mind without worrying.
               <br/><br/>
-              Ab realize hota h me kitna stupid tha 1st year me... yaad h vo movie wala scene jab tera syllabus bacha tha? My bad yrr. I genuinely regret those moments jaha mene mess up kiya.
+              Now that I think about it, I realize me kitna immature tha back then (like uss time jab we went for the movie when tera syllabus wasn't done... stupid move by me).Yrr bhale hi me Gusse me kuch bhi bol du but uske baad bahut regret krta hu aur lekar 10 din tak overthinking krta hu but sorry ni bol pata just out of fear ki saamne wala kese react krega .  I genuinely regret those moments where I messed up.
               <br/><br/>
-              I don't want ki hum door ho jaye. Ye website bas ye batane ka tareeka h ki tu important h mere liye. 
+              I don't want us to drift apart or for things to be awkward. This website is my way of saying I value this friendship, flaws and all. 
               <br/><br/>
-              <strong>Puri Sem break baith ke Web Dev seekhi h bas ye banane ke liye.</strong> (Haan, utni mehnat ki h tere liye, so appreciate it).
-              <br/><br/>
-              Let's reset the vibe this year. No more drama, only good times and placements.
+              Let's reset the vibe this year. No more overthinking, just good times .
             </p>
           </div>
 
