@@ -125,7 +125,7 @@ const HomePage = ({ theme, photoList }) => {
   };
 
   useEffect(() => {
-    const startDate = new Date("2023-08-01"); 
+    const startDate = new Date("2024-08-10"); 
     const timer = setInterval(() => {
       const now = new Date();
       const diff = now - startDate;
