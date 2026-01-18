@@ -115,11 +115,40 @@ const HomePage = ({ theme, photoList }) => {
   const generateMemory = () => {
     const randomIndex = Math.floor(Math.random() * photoList.length);
     setCurrentPhoto(photoList[randomIndex]);
+    
+    // UPDATED CAPTIONS LIST (Indian Slang + Urdu + Funny)
     const captions = [
-      "Bro thinks he is the main character 💀", "Rare footage of you actually working", 
-      "This is why we are single", "Looking like a failed test case ❌", "Moments before disaster", 
-      "Sleep deprivation: 100%", "POV: You just saw the question paper", "Who allowed this??",
-      "Engineering was a mistake", "Deleting this in 24 hours ⏳"
+      "Mashallah, kya nurani chehra hai ✨",
+      "Astaghfirullah, tauba tauba ye kya dekh liya 🤲",
+      "Bhai ki Chaud hi alag hai 😎",
+      "Systummm hang kr diya bhai ne 🔥",
+      "Ye photo delete krne ke paise lagenge 💸",
+      "Nazar na lage mere bhai ko 🧿",
+      "Pure 'Sher' vibe 🦁",
+      "75% Attendance ki tension me",
+      "Engineer bn gya ladka 👨‍💻",
+      "Aesthetic ke 14 📸",
+      "Bhai ka Rishta pakka smjhe? 💍",
+      "Control Uday Control...",
+      "Jalwa hai humara 😎",
+      "Koi sense hai iss baat ki?",
+      "Subhanallah, kudrat ka karishma (ya keher?)",
+      "Ek hi dil hai, kitni baar jeetoge? ❤️",
+      "Full on Bhasad moments",
+      "Raat ke 3 baje wali shakal 🕒",
+      "Nashe me hai kya?",
+      "Future CEO (of Berozgari Pvt Ltd)",
+      "Wah Taj! 🏰",
+      "Inna sona kyu rab ne banaya?",
+      "Pighal gya mai toh... 🫠",
+      "Heavy Driver 🚗",
+      "Alag hi level ka Swag hai",
+      "Bhabhi kidhar hai? 👀",
+      "Katta nikal katta ",
+      "Sukoon ka naam: Abhinav",
+      "Delete this before someone sees 💀",
+      "Kya gunda banega re tu?",
+      "Rare footage of Abhinav not sleeping"
     ];
     setCurrentCaption(captions[Math.floor(Math.random() * captions.length)]);
   };
@@ -178,8 +207,9 @@ const HomePage = ({ theme, photoList }) => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
           
           <div className={`${theme.cardBg} p-4 border-8 ${theme.border} ${theme.shadow} rotate-[-3deg] max-w-md w-full relative z-10`}>
-            <div className={`h-80 md:h-96 bg-black overflow-hidden border-4 ${theme.border}`}>
-              <img src={currentPhoto} className="w-full h-full object-cover" />
+            {/* UPDATED IMAGE STYLING: Added 'bg-black' and 'object-contain' to fit any shape */}
+            <div className={`h-80 md:h-[500px] bg-black overflow-hidden border-4 ${theme.border} flex items-center justify-center`}>
+              <img src={currentPhoto} className="w-full h-full object-contain" />
             </div>
             <h2 className={`text-xl font-black text-center mt-4 uppercase italic border-2 ${theme.border} -rotate-1 px-2 py-1 ${theme.cardBg}`}>
               {currentCaption}
@@ -315,7 +345,7 @@ const DeveloperPage = ({ theme, pic }) => (
             </div>
 
             <p className="opacity-90 leading-relaxed font-medium">
-              Bhai sach batau puri <strong>Sem Break</strong> barbaad kr di mene webd seekhne me. 
+              Bhai sach batau? Puri <strong>Sem Break</strong> barbaad kr di mene React seekhne me. 
               Log skills pr dhyaan de rahe the, aur me yaha baith ke tere liye ye website bana rha tha.
               <br/><br/>
               Bas ye maan le, jitni mehnat isme lagi h na, utni agar codeforces pr ki hoti toh 1300+ rating hoti 🤧.
