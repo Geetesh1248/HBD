@@ -351,7 +351,7 @@ const DeveloperPage = ({ theme, pic }) => (
             </div>
 
             <p className="opacity-90 leading-relaxed font-medium">
-              Bhai sach batau? Puri <strong>Sem Break</strong> barbaad kr di mene React seekhne me. 
+              Bhai sach batau? Puri <strong>Sem Break</strong> barbaad kr di mene webd seekhne me. 
               Log skills pr dhyaan de rahe the, aur me yaha baith ke tere liye ye website bana rha tha.
               <br/><br/>
               Bas ye maan le, jitni mehnat isme lagi h na, utni agar codeforces pr ki hoti toh 1300+ rating hoti 🤧.
